@@ -754,9 +754,9 @@
       var e,
         t = !1;
       function n() {
-        document.querySelector("#atlas") &&
-          (t = mixitup("#atlas", {
-            selectors: { target: ".atlas__item" },
+        document.querySelector("#mapping") &&
+          (t = mixitup("#mapping", {
+            selectors: { target: ".mapping__item" },
             load: { sort: "random" },
             animation: { duration: 300 },
           }));
@@ -772,15 +772,15 @@
           dominantColors(),
           toggleMenu(),
           langMobileHidden(),
-          document.querySelector("#atlas") &&
-            (lazyload(), atlasImgHover(), atlasImgClick(), atlasSortMix()),
+          document.querySelector("#mapping") &&
+            (lazyload(), mappingImgHover(), mappingImgClick(), mappingSortMix()),
           projectToggleLayers(),
           projectSlideshowSlick(),
           projectReadMore(),
           projectDeleteZoomImg(),
           generalMinHeight();
       }
-      document.querySelector("#atlas") && n(),
+      document.querySelector("#mapping") && n(),
         o(),
         u.on("contentReplaced", o),
         u.on("pageView", o),

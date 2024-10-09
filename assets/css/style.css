@@ -114,7 +114,16 @@ video {
   font-family: "Pretendard";
   src: url("../fonts/Pretendard-Regular.subset.woff"),
     url("../fonts/Pretendard-Regular.subset.woff2");
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-Bold.subset.woff"),
+    url("../fonts/Pretendard-Bold.subset.woff2");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -122,8 +131,8 @@ body {
   color: #000;
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  letter-spacing: -0.25px;
-  line-height: 1.15;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
 }
 body.page--project {
   overflow: hidden;
@@ -801,33 +810,33 @@ body.hasHover .tooltip {
   }
 }
 
-/* #atlas__header {
+/* #mapping__header {
   height: 20px;
 } */
 
-#atlas__header .projectlink__url.url--inactive {
+#mapping__header .projectlink__url.url--inactive {
   pointer-events: none !important;
 }
-#atlas__header .projectlink__url.url--active {
+#mapping__header .projectlink__url.url--active {
   pointer-events: all !important;
 }
-#atlas__header .projectlink__url:hover {
+#mapping__header .projectlink__url:hover {
   text-decoration: none !important;
 }
-#atlas__header .atlas__sort {
+#mapping__header .mapping__sort {
   display: none;
 }
-#atlas__header .atlas__sort:hover {
+#mapping__header .mapping__sort:hover {
   cursor: pointer;
 }
-#atlas__header .atlas__sort .sort--active {
+#mapping__header .mapping__sort .sort--active {
   text-decoration: underline;
 }
-#atlas__header .atlas__sort .sort--active::after {
+#mapping__header .mapping__sort .sort--active::after {
   content: "";
 }
 
-#atlas {
+#mapping {
   /* --gap: 0px;
   --line-offset: calc(var(--gap) / 4);
   --line-thickness: 0.5px;
@@ -851,11 +860,11 @@ body.hasHover .tooltip {
 }
 
 @media (min-width: 1200px) {
-  #atlas {
+  #mapping {
     padding-top: 10rem;
   }
 }
-#atlas .atlas__item {
+#mapping .mapping__item {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -877,106 +886,110 @@ body.hasHover .tooltip {
   padding-right: 1.5px;
 }
 
-/* #atlas .atlas__item::before,
-#atlas .atlas__item::after {
+/* #mapping .mapping__item::before,
+#mapping .mapping__item::after {
   content: "";
   position: absolute;
   background-color: var(--line-color);
   z-index: 1;
 }
 
-#atlas .atlas__item::after {
+#mapping .mapping__item::after {
   block-size: var(--line-thickness);
   inline-size: 100vw;
   inset-inline-start: 0;
   inset-block-start: calc(var(--line-offset) * -1);
 }
 
-#atlas .atlas__item::before {
+#mapping .mapping__item::before {
   inline-size: var(--line-thickness);
   block-size: 1000vh;
   inset-block-start: 0;
   inset-inline-start: calc(var(--line-offset) * -1);
 } */
 
-#atlas .atlas__item.hidden {
+#mapping .mapping__item.hidden {
   opacity: 0;
   pointer-events: none;
 }
-#atlas
-  .atlas__item.hidden
+#mapping
+  .mapping__item.hidden
   .item__wrapper
   .item__img__wrapper
   .item__link__wrapper {
   pointer-events: none;
 }
-#atlas .atlas__item.visible {
+#mapping .mapping__item.visible {
   opacity: 1;
   pointer-events: all;
 }
-#atlas .atlas__item .item__wrapper {
+#mapping .mapping__item .item__wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
 }
-#atlas .atlas__item .item__wrapper .item__img__wrapper {
+#mapping .mapping__item .item__wrapper .item__img__wrapper {
   width: 100%;
 }
-#atlas .atlas__item .item__wrapper .item__img__wrapper .item__link__wrapper {
+#mapping .mapping__item .item__wrapper .item__img__wrapper .item__link__wrapper {
   display: block;
+
+  line-height: 1;
 }
-#atlas
-  .atlas__item
+#mapping
+  .mapping__item
   .item__wrapper
   .item__img__wrapper
   .item__link__wrapper:hover {
   cursor: pointer;
 }
-#atlas
-  .atlas__item
+#mapping
+  .mapping__item
   .item__wrapper
   .item__img__wrapper
   .item__link__wrapper
-  .atlas__item__link:hover {
+  .mapping__item__link:hover {
   cursor: pointer;
 }
-#atlas
-  .atlas__item
+#mapping
+  .mapping__item
   .item__wrapper
   .item__img__wrapper
   .item__link__wrapper
-  .atlas__item__link.disabled {
+  .mapping__item__link.disabled {
   pointer-events: none;
 }
 
-#atlas
-  .atlas__item
+#mapping
+  .mapping__item
   .item__wrapper
   .item__img__wrapper
   .item__link__wrapper
-  .atlas__item__link.enabled {
+  .mapping__item__link.enabled {
   pointer-events: all;
 }
 
-#atlas .atlas__item .item__wrapper .item__img {
+#mapping .mapping__item .item__wrapper .item__img {
   width: 100%;
 }
-#atlas .atlas__item .item__wrapper .item__text {
+#mapping .mapping__item .item__wrapper .item__text {
   font-size: 0.5rem;
+  line-height: 1;
+
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-#atlas .atlas__item .item__wrapper .item__text .item__count {
+#mapping .mapping__item .item__wrapper .item__text .item__count {
   padding-left: 0.1rem;
   /* text-transform: lowercase; */
 }
-#atlas .atlas__item .item__wrapper .item__text .item__projectname {
+#mapping .mapping__item .item__wrapper .item__text .item__projectname {
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 @media (min-width: 700px) {
-  #atlas__header .atlas__sort {
+  #mapping__header .mapping__sort {
     display: block;
     position: fixed;
     top: 0;
@@ -984,17 +997,17 @@ body.hasHover .tooltip {
     padding-top: 4px;
     padding-left: 66.6667%;
   }
-  #atlas {
+  #mapping {
     padding-top: calc(2.025rem + 9.3vw);
   }
 }
 @media (min-width: 700px) and (min-width: 1200px) {
-  #atlas {
+  #mapping {
     padding-top: 9rem;
   }
 }
 @media (min-width: 700px) {
-  #atlas .atlas__item {
+  #mapping .mapping__item {
     -ms-flex-preferred-size: 16.667%;
     flex-basis: 16.667%;
     width: 16.667vw;
@@ -1002,24 +1015,24 @@ body.hasHover .tooltip {
   }
 }
 @media (min-width: 700px) and (min-width: 1200px) {
-  #atlas .atlas__item {
+  #mapping .mapping__item {
     padding-bottom: 2rem;
   }
 }
 @media (min-width: 700px) {
-  #atlas .atlas__item .item__wrapper {
+  #mapping .mapping__item .item__wrapper {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
   }
-  #atlas .atlas__item .item__wrapper:before {
+  #mapping .mapping__item .item__wrapper:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 150%;
     pointer-events: none;
   }
-  #atlas .atlas__item .item__wrapper .item__img__wrapper {
+  #mapping .mapping__item .item__wrapper .item__img__wrapper {
     width: 100%;
     position: absolute;
     top: 0;
@@ -1028,50 +1041,50 @@ body.hasHover .tooltip {
     left: 0;
     pointer-events: all;
   }
-  #atlas .atlas__item .item__wrapper .item__text {
+  #mapping .mapping__item .item__wrapper .item__text {
     font-size: 0.55rem;
   }
 }
 @media (min-width: 900px) {
-  #atlas__header {
+  #mapping__header {
     height: 64px;
   }
-  #atlas__header .atlas__sort {
+  #mapping__header .mapping__sort {
     position: relative;
     padding-left: 0;
     padding-top: 0;
   }
-  #atlas .atlas__item {
+  #mapping .mapping__item {
     -ms-flex-preferred-size: 12.5%;
     flex-basis: 12.5%;
     width: 12.5vw;
   }
 }
 @media (min-width: 1400px) {
-  #atlas__header {
+  #mapping__header {
     padding-top: 0;
   }
-  #atlas__header .atlas__sort {
+  #mapping__header .mapping__sort {
     padding-top: 4px;
   }
-  #atlas {
+  #mapping {
     padding-top: calc(1.725rem + 5.7vw);
   }
 }
 @media (min-width: 1400px) and (min-width: 1200px) {
-  #atlas {
+  #mapping {
     padding-top: 6rem;
   }
 }
 @media (min-width: 1400px) {
-  #atlas .atlas__item {
+  #mapping .mapping__item {
     -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
     width: 10vw;
   }
 }
 @media (min-width: 1700px) {
-  #atlas .atlas__item {
+  #mapping .mapping__item {
     -ms-flex-preferred-size: 16.666%;
     flex-basis: 16.666%;
     width: 16.666vw;
@@ -1093,7 +1106,6 @@ body.hasHover .tooltip {
   padding-left: 0.25rem;
   width: 98.6%;
   font-size: 0.87rem;
-  line-height: 1.05;
 }
 @media (min-width: 1200px) {
   #general {
@@ -1123,6 +1135,8 @@ body.hasHover .tooltip {
 #general h1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+
+  font-weight: 600;
 }
 #general h1:first-child {
   padding-top: 0;
@@ -2609,7 +2623,11 @@ body.hasHover .tooltip {
   padding-bottom: 0;
 }
 #information .information__item.information__text {
-  font-size: 1rem;
+  font-size: 1.25rem;
+
+  word-spacing: 1px;
+  line-height: 1.5;
+
   word-break: keep-all;
 
   padding-left: 5px;
@@ -2749,7 +2767,7 @@ body.hasHover .tooltip {
 }
 @media only screen and (min-width: 700px) and (min-width: 1200px) {
   #information .information__item.information__text {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 700px) and (min-width: 1200px) {
@@ -2863,7 +2881,7 @@ body.hasHover .tooltip {
     width: 60%;
   }
   #information .information__item.information__text {
-    width: 80%;
+    width: calc(60% - 1rem);
   }
   #information .information__item.information__more {
     width: 20%;
@@ -2878,7 +2896,7 @@ body.hasHover .tooltip {
     width: 50%;
   }
   #information .information__item.information__text {
-    width: 50%;
+    width: calc(50% - 1rem);
     padding-right: 50%;
   }
   #information .information__item.information__cv {

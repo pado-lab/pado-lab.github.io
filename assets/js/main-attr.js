@@ -1,4 +1,4 @@
-$(".atlas__item a.atlas__item__link").each(function () {
+$(".mapping__item a.mapping__item__link").each(function () {
   var img = $(this).find("img");
   var src = img.attr("src");
   var datasrc = img.attr("data-srcset");

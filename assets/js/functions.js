@@ -111,8 +111,8 @@ function addBodyClass() {
     return (css.match(/(^|\s)page--\S+/g) || []).join(" ");
   });
 
-  if ($("#atlas")[0]) {
-    $("body").addClass("page--atlas");
+  if ($("#mapping")[0]) {
+    $("body").addClass("page--mapping");
   } else if ($("#project")[0]) {
     $("body").addClass("page--project");
   } else if ($("#information")[0]) {
@@ -231,75 +231,75 @@ function dominantColors() {
 
   // console.log(arrayDominantColors)
 
-  if ($("#atlas")[0]) {
-    var arrayAtlasDominantColors = $(".atlas__item").map(function () {
+  if ($("#mapping")[0]) {
+    var arraymappingDominantColors = $(".mapping__item").map(function () {
       return $(this).attr("data-dominantcolor-hex");
     });
 
     var randomNumber = Math.floor(
-      Math.random() * arrayAtlasDominantColors.length
+      Math.random() * arraymappingDominantColors.length
     );
-    atlasRandomDominantColor = arrayAtlasDominantColors[randomNumber];
+    mappingRandomDominantColor = arraymappingDominantColors[randomNumber];
 
-    var atlasRandomDominantColorBrightness = tinycolor(
-      atlasRandomDominantColor
+    var mappingRandomDominantColorBrightness = tinycolor(
+      mappingRandomDominantColor
     ).getBrightness();
 
-    if (tinycolor(atlasRandomDominantColor).isLight()) {
-      // $("#menu").css("background-color", atlasRandomDominantColorMENU)
+    if (tinycolor(mappingRandomDominantColor).isLight()) {
+      // $("#menu").css("background-color", mappingRandomDominantColorMENU)
       $("#menu, #menu__header").css(
         "background-color",
-        atlasRandomDominantColor
+        mappingRandomDominantColor
       );
 
-      if (atlasRandomDominantColorBrightness > 210) {
-        var atlasRandomDominantColorMENU = tinycolor(atlasRandomDominantColor)
+      if (mappingRandomDominantColorBrightness > 210) {
+        var mappingRandomDominantColorMENU = tinycolor(mappingRandomDominantColor)
           .lighten(8)
           .toString();
         $("#menu, #menu__header").css(
           "background-color",
-          atlasRandomDominantColorMENU
+          mappingRandomDominantColorMENU
         );
       } else {
-        var atlasRandomDominantColorMENU = tinycolor(atlasRandomDominantColor)
+        var mappingRandomDominantColorMENU = tinycolor(mappingRandomDominantColor)
           .lighten(10)
           .toString();
         $("#menu, #menu__header").css(
           "background-color",
-          atlasRandomDominantColorMENU
+          mappingRandomDominantColorMENU
         );
       }
 
-      // var atlasRandomDominantColorMENU = tinycolor(atlasRandomDominantColor).lighten(20).toString()
-      // $("#menu").css("background-color", atlasRandomDominantColorMENU)
+      // var mappingRandomDominantColorMENU = tinycolor(mappingRandomDominantColor).lighten(20).toString()
+      // $("#menu").css("background-color", mappingRandomDominantColorMENU)
     } else {
-      if (atlasRandomDominantColorBrightness < 10) {
-        var atlasRandomDominantColorLight = tinycolor(atlasRandomDominantColor)
+      if (mappingRandomDominantColorBrightness < 10) {
+        var mappingRandomDominantColorLight = tinycolor(mappingRandomDominantColor)
           .brighten(10)
           .lighten(20)
           .toString();
-      } else if (atlasRandomDominantColorBrightness < 40) {
-        var atlasRandomDominantColorLight = tinycolor(atlasRandomDominantColor)
+      } else if (mappingRandomDominantColorBrightness < 40) {
+        var mappingRandomDominantColorLight = tinycolor(mappingRandomDominantColor)
           .brighten(10)
           .lighten(10)
           .toString();
       } else {
-        var atlasRandomDominantColorLight = tinycolor(atlasRandomDominantColor)
+        var mappingRandomDominantColorLight = tinycolor(mappingRandomDominantColor)
           .lighten(20)
           .toString();
       }
 
-      var atlasRandomDominantColorLightMENU = tinycolor(
-        atlasRandomDominantColorLight
+      var mappingRandomDominantColorLightMENU = tinycolor(
+        mappingRandomDominantColorLight
       )
         .lighten(10)
         .toString();
       $("#menu, #menu__header").css(
         "background-color",
-        atlasRandomDominantColorLightMENU
+        mappingRandomDominantColorLightMENU
       );
 
-      // $("#menu").css("background-color", atlasRandomDominantColorLight)
+      // $("#menu").css("background-color", mappingRandomDominantColorLight)
     }
   }
 
@@ -394,7 +394,7 @@ function dominantColors() {
   }
 }
 
-//ATLAS
+//mapping
 
 function lazyload() {
   /*
@@ -432,24 +432,24 @@ function lazyload() {
 
 var projectNumber, sameProjectNumber, projectTitle;
 
-function atlasImgHover() {
-  // $(document).on("mouseenter", ".hasHover .atlas__item:not(.hidden) .item__wrapper", function() {
+function mappingImgHover() {
+  // $(document).on("mouseenter", ".hasHover .mapping__item:not(.hidden) .item__wrapper", function() {
   $(document).on(
     "mouseenter",
-    ".atlas__item:not(.hidden) .item__wrapper",
+    ".mapping__item:not(.hidden) .item__wrapper",
     function () {
       projectNumber = $(this).parent().data("project");
       projectTitleNumber = $(this).parent().find(".item__projectnumber").text();
       projectTitleName = $(this).parent().find(".item__projectname").text();
 
-      sameProjectNumber = $("#atlas").find(
+      sameProjectNumber = $("#mapping").find(
         "[data-project='" + projectNumber + "']"
       );
 
       // if ($("body").hasClass("hasHover")) {
 
       sameProjectNumber.find(".item__text").css("opacity", "1");
-      $(".atlas__item")
+      $(".mapping__item")
         .not(sameProjectNumber)
         .find(".item__text")
         .css("opacity", "0");
@@ -462,15 +462,15 @@ function atlasImgHover() {
     }
   );
 
-  $(document).on("mouseleave", ".atlas__item .item__wrapper", function () {
+  $(document).on("mouseleave", ".mapping__item .item__wrapper", function () {
     $(".projecttitle__number").text("");
     $(".projecttitle__name").text("");
 
-    if ($("#atlas").hasClass("projects--filtered")) {
+    if ($("#mapping").hasClass("projects--filtered")) {
       $(".projecttitle__number").text(projectTitleNumber);
       $(".projecttitle__name").text(projectTitleName);
     } else {
-      $(".atlas__item")
+      $(".mapping__item")
         .not(sameProjectNumber)
         .find(".item__text")
         .css("opacity", "1");
@@ -478,27 +478,27 @@ function atlasImgHover() {
   });
 }
 
-function atlasImgClick() {
+function mappingImgClick() {
   if ($(window).width() < 700) {
     // if ($("body").hasClass("hasHover")) {
-    // $(".atlas__item__link").addClass("enabled").removeClass("disabled");
+    // $(".mapping__item__link").addClass("enabled").removeClass("disabled");
   }
 
   $(document).on("click", ".item__link__wrapper", function (event) {
-    projectLink = $(this).find(".atlas__item__link").attr("href");
+    projectLink = $(this).find(".mapping__item__link").attr("href");
 
-    if ($("#atlas").hasClass("projects--filtered")) {
+    if ($("#mapping").hasClass("projects--filtered")) {
     } else {
-      $("#atlas").addClass("projects--filtered");
+      $("#mapping").addClass("projects--filtered");
       $(".projectlink__url")
         .addClass("url--active")
         .removeClass("url--inactive")
         .attr("href", projectLink);
-      $(".atlas__item").not(sameProjectNumber).addClass("hidden");
-      $("#atlas__header .projectlink")
+      $(".mapping__item").not(sameProjectNumber).addClass("hidden");
+      $("#mapping__header .projectlink")
         .addClass("visible")
         .removeClass("hidden");
-      $(".atlas__item:not(.hidden) .atlas__item__link")
+      $(".mapping__item:not(.hidden) .mapping__item__link")
         .addClass("enabled")
         .removeClass("disabled");
     }
@@ -508,23 +508,23 @@ function atlasImgClick() {
     var $target = $(event.target);
 
     if (
-      !$target.closest(".atlas__item .item__link__wrapper").length &&
+      !$target.closest(".mapping__item .item__link__wrapper").length &&
       !$target.closest(".projectlink__url").length &&
       !$target.closest(".header__menutoggle").length &&
-      $("#atlas")[0]
+      $("#mapping")[0]
     ) {
-      $("#atlas").removeClass("projects--filtered");
+      $("#mapping").removeClass("projects--filtered");
       $(".projectlink__url")
         .addClass("url--inactive")
         .removeClass("url--active");
-      $(".atlas__item").removeClass("hidden");
-      $("#atlas__header .projectlink")
+      $(".mapping__item").removeClass("hidden");
+      $("#mapping__header .projectlink")
         .addClass("hidden")
         .removeClass("visible");
-      $(".atlas__item__link").addClass("disabled").removeClass("enabled");
+      $(".mapping__item__link").addClass("disabled").removeClass("enabled");
       $(".projecttitle__number").text("");
       $(".projecttitle__name").text("");
-      $(".atlas__item")
+      $(".mapping__item")
         .not(sameProjectNumber)
         .find(".item__text")
         .css("opacity", "1");
@@ -532,8 +532,8 @@ function atlasImgClick() {
   });
 }
 
-function atlasSortMix() {
-  $(document).on("click", ".atlas__sort__button", function () {
+function mappingSortMix() {
+  $(document).on("click", ".mapping__sort__button", function () {
     $(".sort--active").removeClass("sort--active").addClass("sort--inactive");
     $(this).removeClass("sort--inactive").addClass("sort--active");
   });
@@ -541,7 +541,7 @@ function atlasSortMix() {
 
 //PROJECT
 
-var $atlasProjectImageClicked;
+var $mappingProjectImageClicked;
 
 function projectSlideshowSlick() {
   var $next = $(".nav--next");
@@ -555,10 +555,10 @@ function projectSlideshowSlick() {
   // var sliderCounter = document.createElement('div');
   // sliderCounter.classList.add('slider-counter');
 
-  // Set Intial Slide if coming from Atlas
+  // Set Intial Slide if coming from mapping
 
-  $(document).on("click", ".atlas__item", function () {
-    $atlasProjectImageClicked = $(this).find(".item__imgnumber").text() - 1;
+  $(document).on("click", ".mapping__item", function () {
+    $mappingProjectImageClicked = $(this).find(".item__imgnumber").text() - 1;
   });
 
   //Initialize Slider
@@ -580,7 +580,7 @@ function projectSlideshowSlick() {
       prevArrow: $prev,
       speed: 300,
       touchThreshold: 100,
-      initialSlide: $atlasProjectImageClicked,
+      initialSlide: $mappingProjectImageClicked,
       // swipe: true,
       // swipeToSlide: true,
       // touchMove: true,
@@ -592,12 +592,12 @@ function projectSlideshowSlick() {
       draggable: false,
     });
 
-    // Reset Intial Slide to Zero if not coming from Atlas
+    // Reset Intial Slide to Zero if not coming from mapping
 
     clearTimeout(initialSlideTimer);
 
     initialSlideTimer = setTimeout(function () {
-      $atlasProjectImageClicked = 0;
+      $mappingProjectImageClicked = 0;
     }, 300);
   }, 100);
 
