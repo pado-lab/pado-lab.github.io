@@ -1337,26 +1337,28 @@ body.hasHover .tooltip {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-left: 5px;
-  padding-bottom: 0.7rem;
+  /* padding-left: 5px; */
+  padding-bottom: 0.5rem;
 }
 #project__header .projecttitle__wrapper .projecttitle__number {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+
+  padding-left: 5px;
 }
 #project__header .projecttitle__wrapper .projecttitle__name {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  padding-right: 1rem;
+  /* padding-right: 1rem; */
   position: relative;
 }
 #project__header .projecttitle__wrapper .projecttitle__name:hover a {
   font-style: normal !important;
 }
 #project__header .projecttitle__wrapper .projecttitle__name p {
-  width: 90%;
+  width: fit-content;
 }
 #project__header .projecttoggle {
   position: relative;
@@ -1391,7 +1393,7 @@ body.hasHover .tooltip {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding-right: 1rem;
+  /* padding-right: 1rem; */
   /* padding-left: 0.2rem; */
 
   /* background-color: #fffcfa; */
@@ -1682,8 +1684,8 @@ body.hasHover .tooltip {
   .slideshow__gallery
   .slideshow__item
   .gallery__img {
-  padding-right: 4.5px;
-  padding-left: 3.5px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   width: 100%;
   max-height: calc(100vh - 8.1rem);
   height: calc(100vh - 8.1rem);
@@ -2261,7 +2263,7 @@ body.hasHover .tooltip {
     flex-direction: row;
   }
   #project__header .projecttitle__wrapper .projecttitle__number {
-    /* padding-left: 3.5px; */
+    padding-left: 0;
     /* text-transform: lowercase; */
   }
 
