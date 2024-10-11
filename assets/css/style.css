@@ -264,6 +264,8 @@ body.hasHover .tooltip {
   padding-bottom: 6px;
   z-index: 80;
   background: #ffffff;
+
+  line-height: 1.1;
 }
 .page__header.hidden {
   opacity: 0;
@@ -288,13 +290,15 @@ body.hasHover .tooltip {
   flex: 1;
   width: 33.3333%;
   padding-left: 5px;
+
+  text-transform: uppercase;
 }
 .page__header .projectlink__url .projecttitle__name__wrapper {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
   width: 33.3333%;
-  padding-right: 0.5rem;
+  /* padding-right: 0.5rem; */
 }
 .page__header .projectlink__url .projectlink {
   padding-right: 0.5rem;
@@ -610,7 +614,6 @@ body.hasHover .tooltip {
   cursor: pointer;
 }
 #menu .menu__wrapper .menu__item.projectlist .projectlist__item span {
-  text-transform: capitalize;
   pointer-events: all;
 }
 
@@ -622,6 +625,8 @@ body.hasHover .tooltip {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+
+  font-size: 87.5%;
 }
 #menu
   .menu__wrapper
@@ -631,6 +636,8 @@ body.hasHover .tooltip {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
+
+  text-transform: uppercase;
 }
 #menu .menu__wrapper .menu__item.pages {
   padding-bottom: calc(1.325rem + 0.9vw);
@@ -825,6 +832,8 @@ body.hasHover .tooltip {
 }
 #mapping__header .mapping__sort {
   display: none;
+
+  line-height: 1.1;
 }
 #mapping__header .mapping__sort:hover {
   cursor: pointer;
@@ -844,8 +853,8 @@ body.hasHover .tooltip {
 
   width: 100vw;
   padding-top: calc(2.125rem + 10.5vw);
-  padding-left: 1.5px;
-  padding-right: 1.5px;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -882,8 +891,8 @@ body.hasHover .tooltip {
   padding-bottom: 1rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 1.5px;
-  padding-right: 1.5px;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
 }
 
 /* #mapping .mapping__item::before,
@@ -931,7 +940,11 @@ body.hasHover .tooltip {
 #mapping .mapping__item .item__wrapper .item__img__wrapper {
   width: 100%;
 }
-#mapping .mapping__item .item__wrapper .item__img__wrapper .item__link__wrapper {
+#mapping
+  .mapping__item
+  .item__wrapper
+  .item__img__wrapper
+  .item__link__wrapper {
   display: block;
 
   line-height: 1;
@@ -981,7 +994,7 @@ body.hasHover .tooltip {
 }
 #mapping .mapping__item .item__wrapper .item__text .item__count {
   padding-left: 0.1rem;
-  /* text-transform: lowercase; */
+  text-transform: uppercase;
 }
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
   opacity: 0;
@@ -1085,9 +1098,9 @@ body.hasHover .tooltip {
 }
 @media (min-width: 1700px) {
   #mapping .mapping__item {
-    -ms-flex-preferred-size: 16.666%;
-    flex-basis: 16.666%;
-    width: 16.666vw;
+    -ms-flex-preferred-size: 12.5%;
+    flex-basis: 12.5%;
+    width: 12.5vw;
   }
 }
 #general__header {
@@ -1279,6 +1292,8 @@ body.hasHover .tooltip {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100vw;
+
+  line-height: 1.1;
 }
 #project__header .projectnav {
   display: none;
@@ -1377,12 +1392,12 @@ body.hasHover .tooltip {
   -ms-flex-align: start;
   align-items: flex-start;
   padding-right: 1rem;
-  padding-left: 0.2rem;
+  /* padding-left: 0.2rem; */
 
   /* background-color: #fffcfa; */
 }
 #project__header .projecttoggle .projecttoggle__wrapper .projecttoggle__item {
-  padding-left: 0.2rem;
+  /* padding-left: 0.2rem; */
 }
 #project__header
   .projecttoggle
@@ -2020,8 +2035,8 @@ body.hasHover .tooltip {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-left: 1.5px;
-  padding-right: 1.5px;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -2041,8 +2056,8 @@ body.hasHover .tooltip {
   .overview__thumbnail__wrapper
   .overview__thumbnail
   .item__wrapper {
-  padding-right: 1.5px;
-  padding-left: 1.5px;
+  padding-right: 0.125rem;
+  padding-left: 0.125rem;
 }
 #project
   .project__overview
@@ -2246,7 +2261,7 @@ body.hasHover .tooltip {
     flex-direction: row;
   }
   #project__header .projecttitle__wrapper .projecttitle__number {
-    padding-left: 3.5px;
+    /* padding-left: 3.5px; */
     /* text-transform: lowercase; */
   }
 
@@ -2625,7 +2640,7 @@ body.hasHover .tooltip {
 #information .information__item.information__text {
   font-size: 1.25rem;
 
-  word-spacing: 1px;
+  word-spacing: 0.25px;
   line-height: 1.5;
 
   word-break: keep-all;
@@ -2670,6 +2685,20 @@ body.hasHover .tooltip {
   flex-direction: column;
   padding-bottom: calc(1.525rem + 3.3vw);
 }
+
+#information .information__item.information__cv .cv__item figure {
+  display: flex;
+  width: 100%;
+
+  padding: 1rem 1rem 0 0;
+}
+
+#information .information__item.information__cv .cv__item figure img {
+  width: calc(50% - 1rem);
+
+  padding-right: 0.25rem;
+}
+
 @media (min-width: 1200px) {
   #information .information__item.information__cv .cv__item {
     padding-bottom: 4rem;
