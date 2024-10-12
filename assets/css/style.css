@@ -127,6 +127,12 @@ video {
   font-style: normal;
   font-display: swap;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   color: #000;
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
@@ -260,7 +266,7 @@ body.hasHover .tooltip {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 48px;
+  padding-top: 56px;
   padding-bottom: 6px;
   z-index: 80;
   background: #ffffff;
@@ -833,12 +839,17 @@ body.hasHover .tooltip {
   text-decoration: none !important;
 }
 #mapping__header .mapping__sort {
-  flex-basis: 25%;
+  position: absolute;
+
+  top: 0.5rem;
+  left: 62.5%;
+
+  transform: translateX(-50%);
+
+  /* display: none; */
 
   font-size: 87.5%;
   line-height: 1.2;
-
-  text-wrap: nowrap;
 }
 #mapping__header .mapping__sort:hover {
   cursor: pointer;
@@ -857,7 +868,7 @@ body.hasHover .tooltip {
   --line-color: black; */
 
   width: 100vw;
-  padding-top: calc(2.875rem + 10.5vw);
+  padding-top: calc(2.125rem + 10.5vw);
   padding-left: 0.125rem;
   padding-right: 0.125rem;
   display: -webkit-box;
@@ -888,9 +899,9 @@ body.hasHover .tooltip {
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-preferred-size: 33.333%;
-  flex-basis: 33.333%;
-  width: 33.333%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  width: 25%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   padding-bottom: 1rem;
@@ -1010,6 +1021,9 @@ body.hasHover .tooltip {
   #mapping__header .mapping__sort {
     display: block;
     position: fixed;
+
+    transform: translateX(0);
+
     top: 0;
     left: 0;
     padding-top: 4px;
@@ -1347,7 +1361,7 @@ body.hasHover .tooltip {
   -ms-flex-direction: row;
   flex-direction: row;
   /* padding-left: 5px; */
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.375rem;
 }
 #project__header .projecttitle__wrapper .projecttitle__number {
   -webkit-box-flex: 1;
