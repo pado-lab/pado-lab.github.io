@@ -260,7 +260,7 @@ body.hasHover .tooltip {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 72px;
+  padding-top: 48px;
   padding-bottom: 6px;
   z-index: 80;
   background: #ffffff;
@@ -857,7 +857,7 @@ body.hasHover .tooltip {
   --line-color: black; */
 
   width: 100vw;
-  padding-top: calc(2.125rem + 10.5vw);
+  padding-top: calc(2.875rem + 10.5vw);
   padding-left: 0.125rem;
   padding-right: 0.125rem;
   display: -webkit-box;
