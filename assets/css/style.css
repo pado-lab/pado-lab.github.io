@@ -588,7 +588,7 @@ body.hasHover .tooltip {
 #menu .menu__wrapper .menu__item.projectlist {
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1.4;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,6 +618,15 @@ body.hasHover .tooltip {
   pointer-events: none;
   width: 100%;
 }
+
+#menu
+  .menu__wrapper
+  .menu__item.projectlist
+  .projectlist__item
+  .item--projectname {
+  letter-spacing: 1px;
+}
+
 #menu .menu__wrapper .menu__item.projectlist .projectlist__item:hover {
   cursor: pointer;
 }
@@ -1002,7 +1011,7 @@ body.hasHover .tooltip {
   width: 100%;
 }
 #mapping .mapping__item .item__wrapper .item__text {
-  font-size: 0.5rem;
+  font-size: 0.5625rem;
   line-height: 1;
 
   -webkit-transition: opacity 0.5s;
@@ -1012,6 +1021,11 @@ body.hasHover .tooltip {
   padding-left: 0.1rem;
   text-transform: uppercase;
 }
+
+#mapping .mapping__item .item__wrapper .item__text .item__count .item__projectnumber {
+letter-spacing: .875px;
+}
+
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
   opacity: 0;
   -webkit-transition: opacity 0.5s;
@@ -1074,7 +1088,7 @@ body.hasHover .tooltip {
     pointer-events: all;
   }
   #mapping .mapping__item .item__wrapper .item__text {
-    font-size: 0.55rem;
+    font-size: 0.625rem;
   }
 }
 @media (min-width: 900px) {
@@ -1369,6 +1383,7 @@ body.hasHover .tooltip {
   flex: 1;
 
   padding-left: 5px;
+  letter-spacing: 1px;
 }
 #project__header .projecttitle__wrapper .projecttitle__name {
   -webkit-box-flex: 2;
@@ -1417,8 +1432,6 @@ body.hasHover .tooltip {
   -ms-flex-align: start;
   align-items: flex-start;
 
-  font-size: 90%;
-
   /* padding-right: 1rem; */
   /* padding-left: 0.2rem; */
 
@@ -1432,6 +1445,12 @@ body.hasHover .tooltip {
   .projecttoggle__wrapper
   .projecttoggle__item::after {
   content: "/ ";
+
+  margin: 0 0.5rem;
+}
+
+.projecttoggle__item.active::after {
+  color: #000;
 }
 
 #project__header
@@ -1469,7 +1488,7 @@ body.hasHover .tooltip {
   .projecttoggle
   .projecttoggle__wrapper
   .projecttoggle__item.active {
-  opacity: 0.4;
+  color: #787878;
 }
 
 #project__header
@@ -1826,7 +1845,7 @@ body.hasHover .tooltip {
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  padding-bottom: 0.2rem;
+  padding-bottom: 1.5rem;
   padding-left: 3.5px;
   background: #fff;
   -webkit-box-sizing: border-box;
@@ -1881,6 +1900,16 @@ body.hasHover .tooltip {
   padding-left: 0.2%;
 
   /* text-transform: lowercase; */
+}
+
+#project
+  .project__images
+  .images__slideshow
+  .slideshow__counter
+  .counter__wrapper
+  .counter__item
+  .counter__projectnumber {
+  letter-spacing: 1px;
 }
 
 #project
@@ -1956,6 +1985,15 @@ body.hasHover .tooltip {
   flex-direction: column;
   padding-bottom: 0.9rem;
 }
+
+#project
+  .project__information
+  .project__layer__body
+  .information__meta
+  .meta__wrapper:last-child {
+  padding-bottom: 1.5rem;
+}
+
 #project
   .project__information
   .project__layer__body
@@ -2347,6 +2385,7 @@ body.hasHover .tooltip {
     .projecttoggle__wrapper
     .projecttoggle__item::after {
     content: "";
+    margin: 0;
   }
   #project .project__layer.hidden {
     -webkit-transform: translateX(100%);
@@ -2797,6 +2836,14 @@ body.hasHover .tooltip {
   .more__item__text {
   padding-bottom: 1rem;
 }
+
+#information
+  .information__item.information__more:last-child
+  .more__item:last-child
+  .more__item__text {
+  padding-bottom: 3rem;
+}
+
 #information
   .information__item.information__more
   .more__item
