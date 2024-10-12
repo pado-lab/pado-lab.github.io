@@ -297,6 +297,7 @@ body.hasHover .tooltip {
   width: 33.3333%;
   padding-left: 5px;
 
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .page__header .projectlink__url .projecttitle__name__wrapper {
@@ -1022,8 +1023,13 @@ body.hasHover .tooltip {
   text-transform: uppercase;
 }
 
-#mapping .mapping__item .item__wrapper .item__text .item__count .item__projectnumber {
-letter-spacing: .875px;
+#mapping
+  .mapping__item
+  .item__wrapper
+  .item__text
+  .item__count
+  .item__projectnumber {
+  letter-spacing: 0.875px;
 }
 
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
@@ -2180,9 +2186,10 @@ letter-spacing: .875px;
   .project__layer__body
   .overview__thumbnail__wrapper
   .overview__thumbnail
-  .item__img__text .text__imagecount {
-  letter-spacing: .875px;
-  }
+  .item__img__text
+  .text__imagecount {
+  letter-spacing: 0.875px;
+}
 
 @media (min-width: 700px) {
   #project__header .projecttitle__wrapper .projecttitle__name {
