@@ -582,6 +582,8 @@ body.hasHover .tooltip {
 #menu .menu__wrapper .menu__item.projectlist {
   padding-bottom: 0.5rem;
   font-size: 1rem;
+  line-height: 1.25;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -831,9 +833,12 @@ body.hasHover .tooltip {
   text-decoration: none !important;
 }
 #mapping__header .mapping__sort {
-  display: none;
+  flex-basis: 25%;
 
-  line-height: 1.1;
+  font-size: 87.5%;
+  line-height: 1.2;
+
+  text-wrap: nowrap;
 }
 #mapping__header .mapping__sort:hover {
   cursor: pointer;
@@ -1309,6 +1314,7 @@ body.hasHover .tooltip {
 
   font-size: 75%;
   font-style: italic;
+  text-transform: uppercase;
 }
 #project__header .projectclose {
   width: 25px;
@@ -1449,7 +1455,7 @@ body.hasHover .tooltip {
   .projecttoggle
   .projecttoggle__wrapper
   .projecttoggle__item.active {
-  text-decoration: underline;
+  opacity: 0.4;
 }
 
 #project__header
@@ -2042,7 +2048,7 @@ body.hasHover .tooltip {
 }
 #project .project__overview {
   z-index: 60;
-  background: #f8f8f8;
+  background: #fff;
   padding-top: calc(2.525rem + 15.3vw);
 }
 @media (min-width: 1200px) {
@@ -2051,7 +2057,7 @@ body.hasHover .tooltip {
   }
 }
 #project .project__overview .project__layer__header {
-  background: #f8f8f8;
+  background: #fff;
 }
 #project
   .project__overview
