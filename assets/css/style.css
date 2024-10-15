@@ -452,7 +452,6 @@ body.hasHover .tooltip {
 
 #header .header__sitetitle .header__sitetitle__item a {
   font-size: 125%;
-  text-transform: lowercase;
 }
 
 #header .header__sitetitle .header__sitetitle__item a:hover {
@@ -866,6 +865,8 @@ body.hasHover .tooltip {
 }
 #mapping__header .mapping__sort .sort--active {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #FB6F22;
 }
 #mapping__header .mapping__sort .sort--active::after {
   content: "";
@@ -909,9 +910,9 @@ body.hasHover .tooltip {
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-preferred-size: 25%;
-  flex-basis: 25%;
-  width: 25%;
+  -ms-flex-preferred-size: 33.33%;
+  flex-basis: 33.33%;
+  width: 33.33%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   padding-bottom: 1rem;
@@ -1031,6 +1032,17 @@ body.hasHover .tooltip {
   .item__projectnumber {
   letter-spacing: 0.875px;
 }
+
+#mapping
+  .mapping__item
+  .item__wrapper
+  .item__text
+  .item__count
+  .item__imgnumber {
+  text-decoration: underline;
+  text-decoration-thickness: 1.25px;
+  text-decoration-color: #FB6F22;
+  }
 
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
   opacity: 0;
@@ -1503,6 +1515,10 @@ body.hasHover .tooltip {
   .projecttoggle__item.inactive {
   /* font-style: normal; */
   text-decoration: none;
+
+  /* padding: .25rem .5rem;
+  background: #ddd;
+  border-radius: 2rem; */
 }
 
 #project__header
