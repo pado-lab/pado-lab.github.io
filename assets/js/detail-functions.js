@@ -3,5 +3,5 @@
 $(function () {
   var count = $(".slideshow__gallery .slideshow__item").length;
   var sliderCounterTotal = $(".counter--total");
-  $(sliderCounterTotal).html("/ " + count);
+  $(sliderCounterTotal).html("/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + count);
 });

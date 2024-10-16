@@ -210,7 +210,7 @@ a {
   color: #000;
 }
 body.hasHover a:hover {
-  text-decoration: underline !important;
+  font-style: italic;
 }
 body.hasHover #header .header__menutoggle .header__menutoggle__item:hover {
   text-decoration: underline;
@@ -443,16 +443,19 @@ body.hasHover .tooltip {
 
 #header .header__sitetitle .header__sitetitle__item img {
   width: initial;
-  height: 2.25rem;
+  height: 2rem;
 
   margin-top: 0.125rem;
-  transition: box-shadow 0.125s;
+  transition: opacity 0.125s;
 }
 
-#header .header__sitetitle .header__sitetitle__item img:hover,
+#header .header__sitetitle .header__sitetitle__item img:hover {
+  opacity: 0.4;
+}
+/* ,
 #header .header__sitetitle .header__sitetitle__item img:active {
   box-shadow: 2px 2px 8px inset #999;
-}
+} */
 
 #header .header__sitetitle .header__sitetitle__item.item--1 {
   -webkit-box-flex: 2;
@@ -597,7 +600,7 @@ body.hasHover .tooltip {
 }
 @media (min-width: 900px) {
   #header .header__sitetitle .header__sitetitle__item img {
-    height: 3rem;
+    height: 2.5rem;
   }
 }
 
@@ -638,6 +641,11 @@ body.hasHover .tooltip {
   align-self: flex-start;
   pointer-events: none;
   width: 100%;
+}
+
+#menu .menu__wrapper .menu__item.projectlist .projectlist__item:hover {
+  opacity: 0.6;
+  text-decoration: none;
 }
 
 #menu
@@ -1077,7 +1085,7 @@ body.hasHover .tooltip {
 
   text-underline-position: from-font;
   text-decoration-thickness: 1.5px;
-  text-decoration-color: #222b2e;
+  text-decoration-color: #FB6F22;
 }
 
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
@@ -1505,12 +1513,12 @@ body.hasHover .tooltip {
   opacity: 0.6;
 }
 
-#project__header
+/* #project__header
   .projecttoggle
   .projecttoggle__wrapper
   .projecttoggle__item:active {
   box-shadow: 0 0 0 1px inset;
-}
+} */
 
 #project__header
   .projecttoggle
@@ -1536,6 +1544,13 @@ body.hasHover .tooltip {
     background: transparent;
     box-shadow: none;
     text-decoration: underline;
+  }
+
+  #project__header
+    .projecttoggle
+    .projecttoggle__wrapper
+    .projecttoggle__item:active {
+    box-shadow: none;
   }
 }
 
@@ -1999,6 +2014,19 @@ body.hasHover .tooltip {
   letter-spacing: 0.5px;
 }
 
+#project
+  .project__images
+  .images__slideshow
+  .slideshow__counter
+  .counter__wrapper
+  .counter__item
+  .counter__current {
+  text-decoration: underline;
+
+  text-underline-position: from-font;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #FB6F22;
+}
 #project
   .project__images
   .images__slideshow
