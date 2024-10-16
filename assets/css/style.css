@@ -893,7 +893,7 @@ body.hasHover .tooltip {
   cursor: pointer;
 }
 
-#mapping__header .mapping__sort .mapping__sort__button > img {
+#mapping__header .mapping__sort .mapping__sort__button img {
   width: 1rem;
 
   vertical-align: middle;
@@ -906,11 +906,77 @@ body.hasHover .tooltip {
   text-decoration-thickness: 2px;
   text-decoration-color: #fb6f22; */
 
-  opacity: 0.4;
+  opacity: 0.3;
 }
-#mapping__header .mapping__sort .sort--active::after {
+
+#mapping__header .mapping__sort .sort--active:hover {
+  opacity: 0.3;
+}
+
+.click {
+  animation: click1 3s ease-out 1;
+}
+
+.click2 {
+  animation: click2 4s ease-out 1;
+}
+
+#mapping__header .mapping__sort .sort--active.mapping__sort--random {
+  -webkit-animation-name: getback;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 750ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+
+  animation-name: getback;
+  animation-duration: 1.5s;
+  animation-delay: 750ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0.3;
+}
+
+@keyframes getback {
+  0% {
+    opacity: 0.3;
+  }
+  4% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes click1 {
+  0% {
+    opacity: 0.3;
+  }
+  4% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes click2 {
+  0% {
+    opacity: 0.3;
+  }
+  4% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* #mapping__header .mapping__sort .sort--active::after {
   content: "";
-}
+} */
 
 #mapping {
   /* --gap: 0px;
@@ -1085,7 +1151,7 @@ body.hasHover .tooltip {
 
   text-underline-position: from-font;
   text-decoration-thickness: 1.5px;
-  text-decoration-color: #FB6F22;
+  text-decoration-color: #fb6f22;
 }
 
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
@@ -2025,7 +2091,7 @@ body.hasHover .tooltip {
 
   text-underline-position: from-font;
   text-decoration-thickness: 1.5px;
-  text-decoration-color: #FB6F22;
+  text-decoration-color: #fb6f22;
 }
 #project
   .project__images
