@@ -438,7 +438,20 @@ body.hasHover .tooltip {
 #header .header__sitetitle .header__sitetitle__item {
   pointer-events: all;
   display: inline-block;
+  text-align: left;
 }
+
+#header .header__sitetitle .header__sitetitle__item:hover {
+  opacity: 0.6;
+}
+
+#header .header__sitetitle .header__sitetitle__item img {
+  width: fit-content;
+  height: 2.25rem;
+
+  margin-top: 0.25rem;
+}
+
 #header .header__sitetitle .header__sitetitle__item.item--1 {
   -webkit-box-flex: 2;
   -ms-flex: 2;
@@ -850,7 +863,7 @@ body.hasHover .tooltip {
 #mapping__header .mapping__sort {
   position: absolute;
 
-  top: 0.5rem;
+  top: 0.375rem;
   left: 62.5%;
 
   transform: translateX(-50%);
@@ -2621,8 +2634,8 @@ body.hasHover .tooltip {
     padding-left: 0;
   }
   #project .project__layer.visible {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: translateX(calc(50% - 0.25rem));
+    transform: translateX(calc(50% - 0.25rem));
   }
   #project .project__information .project__layer__body .information__meta {
     padding-bottom: 0;
@@ -2868,7 +2881,7 @@ body.hasHover .tooltip {
 }
 #information .information__item.information__cv .cv__item .cv__item__text p {
   padding-right: 1rem;
-  text-indent: 2.5rem;
+  text-indent: 2rem;
 }
 #information
   .information__item.information__cv
@@ -2899,13 +2912,31 @@ body.hasHover .tooltip {
   .information__item.information__more
   .more__item
   .more__item__header {
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.25rem;
 }
 #information
   .information__item.information__more
   .more__item
   .more__item__text {
   padding-bottom: 1rem;
+}
+
+#information .information__item.information__more .more__item figure {
+  position: relative;
+
+  /* transform: translateY(-2rem); */
+}
+
+#information .information__item.information__more .more__item figure img {
+  height: 2rem;
+}
+
+#information
+  .information__item.information__more.more--right
+  .more__item
+  figure {
+  text-align: center;
+  margin: 0 auto 2rem;
 }
 
 #information
