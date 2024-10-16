@@ -209,6 +209,7 @@ em {
 a {
   color: #000;
 }
+
 body.hasHover a:hover {
   font-style: italic;
 }
@@ -1150,7 +1151,7 @@ body.hasHover .tooltip {
   text-decoration: underline;
 
   text-underline-position: from-font;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 1px;
   text-decoration-color: #fb6f22;
 }
 
@@ -2995,6 +2996,9 @@ body.hasHover .tooltip {
 #information .information__item.information__cv .cv__item .cv__item__text p {
   padding-right: 1rem;
   text-indent: 2rem;
+
+  word-break: keep-all;
+  text-wrap: pretty;
 }
 #information
   .information__item.information__cv
