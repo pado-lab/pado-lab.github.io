@@ -602,6 +602,7 @@ body.hasHover .tooltip {
 @media (min-width: 900px) {
   #header .header__sitetitle .header__sitetitle__item img {
     height: 2.5rem;
+ 
   }
 }
 
@@ -887,8 +888,7 @@ body.hasHover .tooltip {
 
   /* display: none; */
 
-  /* font-size: 87.5%;
-  line-height: 1.2; */
+  font-size: 87.5%;
 }
 #mapping__header .mapping__sort:hover {
   cursor: pointer;
@@ -1171,6 +1171,7 @@ body.hasHover .tooltip {
     left: 0;
     padding-top: 4px;
     padding-left: 66.6667%;
+    font-size: 100%;
   }
   #mapping {
     padding-top: calc(2.025rem + 9.3vw);
