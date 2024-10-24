@@ -602,7 +602,6 @@ body.hasHover .tooltip {
 @media (min-width: 900px) {
   #header .header__sitetitle .header__sitetitle__item img {
     height: 2.5rem;
- 
   }
 }
 
@@ -1024,7 +1023,7 @@ body.hasHover .tooltip {
   width: 33.33%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 0.125rem;
@@ -1131,6 +1130,8 @@ body.hasHover .tooltip {
 #mapping .mapping__item .item__wrapper .item__text .item__count {
   padding-left: 0.1rem;
   text-transform: uppercase;
+  
+  line-height: 1.4;
 }
 
 #mapping
@@ -1148,11 +1149,13 @@ body.hasHover .tooltip {
   .item__text
   .item__count
   .item__imgnumber {
-  text-decoration: underline;
+  font-weight: 600;
+  /* text-decoration: underline;
 
   text-underline-position: from-font;
   text-decoration-thickness: 1px;
-  text-decoration-color: #fb6f22;
+
+  text-decoration-color: #fb6f22; */
 }
 
 #mapping .mapping__item .item__wrapper .item__text .item__projectname {
@@ -2089,11 +2092,12 @@ body.hasHover .tooltip {
   .counter__wrapper
   .counter__item
   .counter__current {
-  text-decoration: underline;
+  font-weight: 600;
+  /* text-decoration: underline;
 
   text-underline-position: from-font;
   text-decoration-thickness: 1.5px;
-  text-decoration-color: #fb6f22;
+  text-decoration-color: #fb6f22; */
 }
 #project
   .project__images
@@ -2323,7 +2327,7 @@ body.hasHover .tooltip {
   width: 33.3333%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 #project
   .project__overview
