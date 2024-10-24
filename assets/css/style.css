@@ -3,6 +3,13 @@
   --white: #fff;
 }
 
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
 .item__img {
   -webkit-transition: opacity 0.5s, -webkit-filter 0.5s;
   transition: opacity 0.5s, -webkit-filter 0.5s;
@@ -177,6 +184,7 @@ body.page--project .overflow__wrapper {
   -ms-transition: none !important;
   -o-transition: none !important;
 }
+
 .transition-fade {
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -1763,7 +1771,7 @@ button:hover {
   .menu__item.projectlist
   .projectlist__item.active
   .item--projectname {
-  color: #787878;
+  opacity: 0.3;
 }
 
 #project__header
@@ -2299,7 +2307,7 @@ button:hover {
 }
 #project .project__information .project__layer__body .information__description {
   font-size: 1.19rem;
-  line-height: 1.4;
+  line-height: 1.5;
   text-indent: 2rem;
   word-break: keep-all;
 
