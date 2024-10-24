@@ -1130,7 +1130,7 @@ body.hasHover .tooltip {
 #mapping .mapping__item .item__wrapper .item__text .item__count {
   padding-left: 0.1rem;
   text-transform: uppercase;
-  
+
   line-height: 1.4;
 }
 
@@ -1306,10 +1306,15 @@ body.hasHover .tooltip {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
+
+  font-size: 1rem;
 }
 #general .general__wrapper p {
   padding-bottom: 1rem;
   display: block;
+
+  text-wrap: pretty;
+  word-break: keep-all;
 }
 #general h1 {
   padding-top: 1rem;
@@ -1364,9 +1369,9 @@ body.hasHover .tooltip {
 }
 @media (min-width: 1400px) {
   #general .general__wrapper {
-    -webkit-columns: 5;
-    -moz-columns: 5;
-    columns: 5;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
     -webkit-column-width: 20%;
     -moz-column-width: 20%;
     column-width: 20%;
@@ -1395,11 +1400,6 @@ body.hasHover .tooltip {
   }
   #general {
     width: 99.3%;
-  }
-  #general .general__wrapper {
-    -webkit-columns: 6;
-    -moz-columns: 6;
-    columns: 6;
   }
 }
 .slick-slide {
