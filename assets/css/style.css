@@ -1563,18 +1563,13 @@ body.hasHover .tooltip {
   -ms-flex-align: start;
   align-items: flex-start;
 
-  /* padding-right: 1rem; */
-  /* padding-left: 0.2rem; */
-
   /* background-color: #fffcfa; */
 }
 #project__header .projecttoggle .projecttoggle__wrapper .projecttoggle__item {
-  /* padding-left: 0.2rem; */
-
   font-size: 70%;
   color: #333;
   padding: 0.25rem 0.5rem;
-  background: #f0f0f0;
+  background: #f0f0f060;
 }
 
 #project__header
@@ -1600,8 +1595,6 @@ body.hasHover .tooltip {
 
 @media (min-width: 900px) {
   #project__header .projecttoggle .projecttoggle__wrapper .projecttoggle__item {
-    /* padding-left: 0.2rem; */
-
     font-size: inherit;
     padding: 0;
     background: transparent;
