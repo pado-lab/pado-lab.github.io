@@ -1,3 +1,8 @@
+::root {
+  --black: #000;
+  --white: #fff;
+}
+
 .item__img {
   -webkit-transition: opacity 0.5s, -webkit-filter 0.5s;
   transition: opacity 0.5s, -webkit-filter 0.5s;
@@ -134,12 +139,19 @@ body {
 }
 
 body {
-  color: #000;
+  background: white;
+  color: #111;
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   letter-spacing: -0.2px;
   line-height: 1.4;
 }
+
+body.dark {
+  color: white;
+  background-color: #111;
+}
+
 body.page--project {
   overflow: hidden;
 }
@@ -207,8 +219,26 @@ em {
   width: 100%;
 }
 a {
-  color: #000;
+  color: #111;
 }
+
+body.dark a {
+  color: white;
+}
+
+body.dark #header .header__sitetitle .header__sitetitle__item a > img,
+body.dark #mapping__header .mapping__sort .mapping__sort__button img {
+  filter: invert(1);
+}
+
+/* body.dark.overflowhidden
+  #header
+  .header__sitetitle
+  .header__sitetitle__item
+  a
+  > img {
+  filter: invert(0);
+} */
 
 body.hasHover a:hover {
   font-style: italic;
@@ -216,21 +246,25 @@ body.hasHover a:hover {
 body.hasHover #header .header__menutoggle .header__menutoggle__item:hover {
   text-decoration: underline;
 }
+
 /* body.hasHover #project__header .projecttoggle .projecttoggle__item:hover {
   text-decoration: underline;
 } */
+
 /* body.hasHover
   #project__header
   .projecttoggle
   .projecttoggle__item.inactive:hover {
   text-decoration: underline;
 } */
+
 body.hasHover .tooltip {
   position: absolute;
   display: block;
   z-index: 2000;
   pointer-events: none;
 }
+
 .language__item,
 .language {
   -webkit-box-orient: vertical;
@@ -270,10 +304,15 @@ body.hasHover .tooltip {
   padding-top: 56px;
   padding-bottom: 6px;
   z-index: 80;
-  background: #ffffff;
 
+  background: #fff;
   line-height: 1.1;
 }
+
+body.dark .page__header {
+  background: #111;
+}
+
 .page__header.hidden {
   opacity: 0;
 }
@@ -548,6 +587,11 @@ body.hasHover .tooltip {
   -webkit-overflow-scrolling: touch;
   opacity: 0;
 }
+
+body.dark #menu {
+  background: #333;
+}
+
 #menu.hidden {
   -webkit-transform: translateY(-110%);
   transform: translateY(-110%);
@@ -562,6 +606,15 @@ body.hasHover .tooltip {
   transform: translateY(0);
   pointer-events: all;
 }
+
+body.dark #menu__header,
+body.dark #menu {
+  /* filter: invert(0);
+  filter: brightness(50%); */
+
+  /* mix-blend-mode: darken; */
+}
+
 #menu .menu--close {
   position: fixed;
   top: 0;
@@ -593,12 +646,60 @@ body.hasHover .tooltip {
   overflow-y: scroll;
   max-height: 100vh;
 }
+
+body.dark #menu .menu__wrapper p,
+body.dark #menu .menu__wrapper a {
+  /* color: #111; */
+}
+
+body.dark.overflowhidden
+  #header
+  .header__menutoggle
+  .header__menutoggle__item
+  span {
+  /* color: #111; */
+}
+
 #menu .menu__wrapper .menu__item.contact {
   padding-bottom: calc(1.325rem + 0.9vw);
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
 }
+
+#theme-toggle {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+
+  z-index: 1001;
+
+  cursor: pointer;
+  transition: opacity 0.125s;
+}
+
+#theme-toggle > em::before {
+  content: "\263E";
+
+  display: inline-block;
+
+  font-size: inherit;
+  text-decoration: none;
+}
+
+body.dark #theme-toggle > em::before {
+  content: "\2600";
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
 @media (min-width: 900px) {
   #header .header__sitetitle .header__sitetitle__item img {
     height: 2.5rem;
@@ -611,9 +712,9 @@ body.hasHover .tooltip {
   }
 }
 #menu .menu__wrapper .menu__item.projectlist {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.325;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -887,7 +988,7 @@ body.hasHover .tooltip {
 
   /* display: none; */
 
-  font-size: 87.5%;
+  font-size: 75%;
 }
 #mapping__header .mapping__sort:hover {
   cursor: pointer;
@@ -982,7 +1083,7 @@ body.hasHover .tooltip {
   /* --gap: 0px;
   --line-offset: calc(var(--gap) / 4);
   --line-thickness: 0.5px;
-  --line-color: black; */
+  --line-color: #111; */
 
   width: 100vw;
   padding-top: calc(2.125rem + 10.5vw);
@@ -1131,7 +1232,7 @@ body.hasHover .tooltip {
   padding-left: 0.1rem;
   text-transform: uppercase;
 
-  line-height: 1.4;
+  line-height: 1.25;
 }
 
 #mapping
@@ -1567,7 +1668,7 @@ body.hasHover .tooltip {
 }
 #project__header .projecttoggle .projecttoggle__wrapper .projecttoggle__item {
   font-size: 70%;
-  color: #333;
+
   padding: 0.25rem 0.5rem;
   background: #f0f0f060;
 }
@@ -2013,7 +2114,7 @@ body.hasHover .tooltip {
   flex-direction: column-reverse;
   padding-bottom: 1.5rem;
   padding-left: 3.5px;
-  background: #fff;
+
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -2289,6 +2390,11 @@ body.hasHover .tooltip {
   background: #fff;
   padding-top: calc(2.525rem + 15.3vw);
 }
+
+body.dark #project .project__overview {
+  background: #111;
+}
+
 @media (min-width: 1200px) {
   #project .project__overview {
     padding-top: 14rem;
@@ -2297,6 +2403,11 @@ body.hasHover .tooltip {
 #project .project__overview .project__layer__header {
   background: #fff;
 }
+
+body.dark #project .project__overview .project__layer__header {
+  background: #111;
+}
+
 #project
   .project__overview
   .project__layer__body
@@ -3044,6 +3155,15 @@ body.hasHover .tooltip {
 
 #information .information__item.information__more .more__item figure img {
   height: 2rem;
+}
+
+body.dark
+  #information
+  .information__item.information__more
+  .more__item
+  figure
+  img {
+  filter: invert(1);
 }
 
 #information
