@@ -1,1 +1,2 @@
-# pado-lab.github.io
+# The Institute of Object 〈PADO〉
+# pado.sansuhwa.com
