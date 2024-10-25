@@ -802,6 +802,12 @@ button:hover {
   -ms-flex-order: 3;
   order: 3;
 }
+
+#menu .menu__wrapper .menu__item.pages .menu_bottom {
+  position: relative;
+  padding-top: 0.75rem;
+}
+
 @media (min-width: 1200px) {
   #menu .menu__wrapper .menu__item.pages {
     padding-bottom: 2rem;
@@ -895,6 +901,7 @@ button:hover {
     position: absolute;
     bottom: 0;
     padding-bottom: 1rem;
+    padding-top: 0;
   }
   #menu .menu__wrapper .menu__item.language {
     -webkit-box-ordinal-group: 3;
@@ -1003,7 +1010,7 @@ button:hover {
 }
 
 #mapping__header .mapping__sort .mapping__sort__button img {
-  width: 1rem;
+  width: 0.875rem;
 
   vertical-align: middle;
   transform: translateY(-0.75px);
@@ -1304,7 +1311,7 @@ button:hover {
 }
 @media (min-width: 700px) and (min-width: 1200px) {
   #mapping .mapping__item {
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
   }
 }
 @media (min-width: 700px) {
