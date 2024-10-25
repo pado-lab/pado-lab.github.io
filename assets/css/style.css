@@ -1,5 +1,5 @@
-::root {
-  --black: #000;
+:root {
+  --black: #121212;
   --white: #fff;
 }
 
@@ -147,7 +147,7 @@ body {
 
 body {
   background: white;
-  color: #111;
+  color: var(--black);
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   letter-spacing: -0.2px;
@@ -156,7 +156,7 @@ body {
 
 body.dark {
   color: white;
-  background-color: #111;
+  background-color: var(--black);
 }
 
 body.page--project {
@@ -227,7 +227,7 @@ em {
   width: 100%;
 }
 a {
-  color: #111;
+  color: var(--black);
 }
 
 body.dark a {
@@ -318,7 +318,7 @@ body.hasHover .tooltip {
 }
 
 body.dark .page__header {
-  background: #111;
+  background: var(--black);
 }
 
 .page__header.hidden {
@@ -657,7 +657,7 @@ body.dark #menu {
 
 body.dark #menu .menu__wrapper p,
 body.dark #menu .menu__wrapper a {
-  /* color: #111; */
+  /* color: var(--black) */
 }
 
 body.dark.overflowhidden
@@ -665,7 +665,7 @@ body.dark.overflowhidden
   .header__menutoggle
   .header__menutoggle__item
   span {
-  /* color: #111; */
+  /* color: var(--black) */
 }
 
 #menu .menu__wrapper .menu__item.contact {
@@ -891,7 +891,7 @@ button:hover {
     order: 4 !important;
     font-size: 0.81rem;
   }
-  #menu .menu__wrapper .menu__item.pages .legal {
+  #menu .menu__wrapper .menu__item.pages .menu_bottom {
     position: absolute;
     bottom: 0;
     padding-bottom: 1rem;
@@ -1091,7 +1091,7 @@ button:hover {
   /* --gap: 0px;
   --line-offset: calc(var(--gap) / 4);
   --line-thickness: 0.5px;
-  --line-color: #111; */
+  --line-color: var(--black) */
 
   width: 100vw;
   padding-top: calc(2.125rem + 10.5vw);
@@ -1373,9 +1373,9 @@ button:hover {
 }
 @media (min-width: 1700px) {
   #mapping .mapping__item {
-    -ms-flex-preferred-size: 12.5%;
-    flex-basis: 12.5%;
-    width: 12.5vw;
+    -ms-flex-preferred-size: 10%;
+    flex-basis: 10%;
+    width: 10vw;
   }
 }
 #general__header {
@@ -2400,7 +2400,7 @@ button:hover {
 }
 
 body.dark #project .project__overview {
-  background: #111;
+  background: var(--black);
 }
 
 @media (min-width: 1200px) {
@@ -2413,7 +2413,7 @@ body.dark #project .project__overview {
 }
 
 body.dark #project .project__overview .project__layer__header {
-  background: #111;
+  background: var(--black);
 }
 
 #project
@@ -2714,7 +2714,7 @@ body.dark #project .project__overview .project__layer__header {
     height: 58px;
   }
   #project .project__layer .project__layer__body {
-    padding-top: calc(1.825rem + 6.9vw);
+    padding-top: calc(2rem + 5vw);
   }
 }
 @media (min-width: 900px) and (min-width: 1200px) {
