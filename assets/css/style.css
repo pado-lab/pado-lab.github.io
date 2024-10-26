@@ -1567,6 +1567,7 @@ button:hover {
 }
 #project__header {
   background: transparent !important;
+  border: none !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
