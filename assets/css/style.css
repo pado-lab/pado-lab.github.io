@@ -3049,7 +3049,6 @@ body.dark #project .project__overview .project__layer__header {
   padding: 0 5px;
 
   margin-bottom: 2rem;
- 
 }
 
 @media (min-width: 1200px) {
@@ -3060,6 +3059,7 @@ body.dark #project .project__overview .project__layer__header {
 
 #information .information__video video {
   max-width: 420px;
+  width: 100%;
 
   border: 1px solid #ddd;
 }
