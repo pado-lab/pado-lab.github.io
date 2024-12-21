@@ -812,7 +812,6 @@ button:hover {
 
   margin-left: 4px;
   padding: 2px 5px;
-
 }
 
 #menu .menu__wrapper .menu__item.pages .menu_bottom {
@@ -3056,7 +3055,7 @@ body.dark #project .project__overview .project__layer__header {
 }
 
 #information .information__video {
-  padding: 0 7px 0 5px;
+  padding: 0 5px 0 5px;
 
   margin-bottom: 2rem;
 }
@@ -3067,11 +3066,11 @@ body.dark #project .project__overview .project__layer__header {
   }
 }
 
-#information .information__video video {
+#information .information__video video,
+#information .information__video iframe {
   max-width: 420px;
   width: 100%;
 
-  border: 1px solid #ddd;
 }
 
 #information .information__video h1 {
@@ -3105,7 +3104,7 @@ body.dark #project .project__overview .project__layer__header {
   word-break: keep-all;
 
   padding-left: 5px;
-  padding-bottom: calc(2.025rem + 9.3vw);
+  padding-bottom: calc(1rem + 2vw);
 }
 @media (min-width: 1200px) {
   #information .information__item.information__text {
