@@ -695,7 +695,7 @@ body.dark.overflowhidden
 }
 
 #theme-toggle > em::before {
-  content: "\263E";
+  content: "\2610";
 
   display: inline-block;
 
@@ -704,7 +704,7 @@ body.dark.overflowhidden
 }
 
 body.dark #theme-toggle > em::before {
-  content: "\2600";
+  content: "\2612";
 }
 
 button:hover {
@@ -1362,9 +1362,9 @@ button:hover {
     padding-top: 0;
   }
   #mapping .mapping__item {
-    -ms-flex-preferred-size: 12.5%;
-    flex-basis: 12.5%;
-    width: 12.5vw;
+    -ms-flex-preferred-size: 16.6667%;
+    flex-basis: 16.6667%;
+    width: 16.6667vw;
   }
 }
 @media (min-width: 1400px) {
@@ -1385,16 +1385,16 @@ button:hover {
 }
 @media (min-width: 1400px) {
   #mapping .mapping__item {
-    -ms-flex-preferred-size: 10%;
-    flex-basis: 10%;
-    width: 10vw;
+    -ms-flex-preferred-size: 12.5%;
+    flex-basis: 12.5%;
+    width: 12.5vw;
   }
 }
 @media (min-width: 1700px) {
   #mapping .mapping__item {
-    -ms-flex-preferred-size: 10%;
-    flex-basis: 10%;
-    width: 10vw;
+    -ms-flex-preferred-size: 12.5%;
+    flex-basis: 12.5%;
+    width: 12.5vw;
   }
 }
 #general__header {
