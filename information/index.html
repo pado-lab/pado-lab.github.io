@@ -475,7 +475,7 @@
                     href="https://www.sansuhwa.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><span>→</span> sansuhwa.com</a
+                    ><span>External Link:</span> www.sansuhwa.com</a
                   >
                 </p>
               </div>
@@ -489,7 +489,7 @@
                     href="https://archive.sansuhwa.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><span>→</span> archive.sansuhwa.com</a
+                    ><span>External Link:</span> www.archive.sansuhwa.com</a
                   >
                 </p>
               </div>
@@ -503,9 +503,19 @@
                     href="https://www.instagram.com/sansuhwatea"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><span>→</span> @sansuhwatea</a
+                    ><span>External Link:</span> @sansuhwatea</a
                   >
                 </p>
+              </div>
+            </div>
+
+            <div class="more__item">
+              <div class="more__item__text">
+                <sub>
+                  © <span class="copyright__year"></span>.
+                  <a href="https://sansuhwa.com">SANSUHWA</a> all rights
+                  reserved.
+                </sub>
               </div>
             </div>
 
@@ -540,5 +550,14 @@
     <script src="../assets/js/functions.min.js"></script>
     <!-- <script src="../assets/js/functions.js"></script> -->
     <script src="../assets/js/bundle.js"></script>
+    <script>
+      // footer year func
+      const date = new Date();
+      const year = date.getFullYear();
+
+      $(".copyright__year").each(function () {
+        $(this).html(year);
+      });
+    </script>
   </body>
 </html>
