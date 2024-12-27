@@ -271,7 +271,7 @@ aside {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
 
-  font-size: 75%;
+  font-size: 82.5%;
   letter-spacing: 0.05em;
 }
 
@@ -280,7 +280,7 @@ dialog {
   bottom: 0;
 
   margin: 0;
-  padding: 0.5rem 0 0.625rem;
+  padding: 1rem 0;
 
   border-top: thin solid #eaeaea7e;
   background-color: #f8f8f8d4;
@@ -298,12 +298,13 @@ dialog::backdrop {
   backdrop-filter: blur(8px);
 }
 
-dialog form {
-  margin-top: 0.75rem;
-}
-
 dialog button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 75%;
 
   box-shadow: none;
   border: none;
