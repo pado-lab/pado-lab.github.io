@@ -3261,6 +3261,11 @@ body.dark
   li {
   padding-right: calc(1.425rem + 2.1vw);
 }
+
+#information .more__item__text p > a > span {
+font-size: 75%;
+}
+
 @media (min-width: 1200px) {
   #information
     .information__item.information__more
