@@ -267,6 +267,63 @@ body.hasHover #header .header__menutoggle .header__menutoggle__item:hover {
   text-decoration: underline;
 } */
 
+aside {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+
+  font-size: 75%;
+  letter-spacing: 0.05em;
+}
+
+dialog {
+  position: fixed;
+  bottom: 0;
+
+  margin: 0;
+  padding: 0.5rem 0 0.625rem;
+
+  border-top: thin solid #eaeaea7e;
+  background-color: #f8f8f8d4;
+
+  width: 100%;
+
+  border: 0;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(8px);
+}
+
+dialog form {
+  margin-top: 0.75rem;
+}
+
+dialog button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  outline: thin solid #000;
+  border-radius: 3px;
+  transition: opacity 0.125s;
+
+  cursor: pointer;
+}
+
+body.dark dialog button {
+  outline: thin solid #fff;
+  color: #fff;
+}
+
+body.dark dialog {
+  background-color: #333333b6;
+}
+
 body.hasHover .tooltip {
   position: absolute;
   display: block;
@@ -3263,7 +3320,7 @@ body.dark
 }
 
 #information .more__item__text p > a > span {
-font-size: 75%;
+  font-size: 75%;
 }
 
 @media (min-width: 1200px) {
