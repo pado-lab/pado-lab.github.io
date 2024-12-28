@@ -283,7 +283,7 @@ dialog {
   padding: 1rem 0;
 
   border-top: thin solid #eaeaea7e;
-  background-color: #f8f8f8d4;
+  background-color: #fb6f2233;
 
   width: 100%;
 
@@ -293,9 +293,18 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #fb6f2233;
 
   backdrop-filter: blur(8px);
+}
+
+dialog a > span {
+  font-size: 90%;
+}
+
+dialog a:hover {
+  text-decoration: underline;
+  font-style: initial;
 }
 
 dialog button {
@@ -316,13 +325,19 @@ dialog button {
   cursor: pointer;
 }
 
+@media (min-width: 700px) {
+  dialog button {
+    font-size: 100%;
+  }
+}
+
 body.dark dialog button {
   outline: thin solid #fff;
   color: #fff;
 }
 
 body.dark dialog {
-  background-color: #333333b6;
+  background-color: #e95504ba;
 }
 
 body.hasHover .tooltip {
@@ -1073,6 +1088,8 @@ button:hover {
 
   /* display: none; */
 
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 0.025em;
   font-size: 75%;
 }
 #mapping__header .mapping__sort:hover {
