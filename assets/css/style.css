@@ -284,6 +284,8 @@ dialog {
 
   border-top: thin solid #eaeaea7e;
   background-color: #fb6f2233;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   width: 100%;
 
@@ -292,10 +294,20 @@ dialog {
   z-index: 1000;
 }
 
-dialog::backdrop {
-  background-color: #fb6f2233;
+dialog {
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 
-  backdrop-filter: blur(8px);
+    background-color: #fb6f2233;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
 }
 
 dialog a > span {
@@ -304,7 +316,7 @@ dialog a > span {
 
 dialog a:hover {
   text-decoration: underline;
-  font-style: initial;
+  font-style: none;
 }
 
 dialog button {
