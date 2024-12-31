@@ -331,6 +331,7 @@ dialog button {
   border: none;
   background: transparent;
   outline: thin solid #000;
+  color: #000;
   border-radius: 3px;
   transition: opacity 0.125s;
 
