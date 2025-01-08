@@ -2587,16 +2587,6 @@ body.dark #project .project__overview .project__layer__header {
   padding-left: 1.75px;
 }
 
-#project
-  .project__overview
-  .project__layer__body
-  .overview__thumbnail__wrapper
-  .overview__thumbnail
-  .item__img__text
-  .text__imagecount {
-  /* letter-spacing: 0.875px; */
-}
-
 @media (min-width: 700px) {
   #project__header .projecttitle__wrapper .projecttitle__name {
     -webkit-box-flex: 4;
