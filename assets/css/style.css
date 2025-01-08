@@ -1269,7 +1269,7 @@ button:hover {
 } */
 
 #mapping .mapping__item.hidden {
-  opacity: 0;
+  opacity: 0.3;
   pointer-events: none;
 }
 #mapping
