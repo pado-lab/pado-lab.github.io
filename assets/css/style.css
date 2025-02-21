@@ -2130,7 +2130,7 @@ position: absolute;
 }
 
 @media (min-width: 1400px) {
-  .project__loading {
+  .project__loading.on {
     display: none;
   }
 }
