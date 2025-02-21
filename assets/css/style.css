@@ -2115,9 +2115,7 @@ button:hover {
 }
 
 .load__info button {
-  position: absolute;
-
-  bottom: 2rem;
+  margin-top: 3rem;
 
   padding: 0.25rem 1.25rem 0.35rem;
   background: #000;
@@ -2131,7 +2129,7 @@ button:hover {
 }
 
 @media (min-width: 1400px) {
-  .load__info {
+  .project__loading {
     display: none;
   }
 }
