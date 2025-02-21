@@ -2,7 +2,7 @@ const tl = gsap.timeline({defaults: {ease: "power2.out"}});
 
 tl.to(".zoom-finger", {
   opacity: "1",
-  scale: 1.2,
+  scale: 1.05,
   y: "0",
 
   delay: 0.25,

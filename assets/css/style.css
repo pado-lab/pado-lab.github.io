@@ -2106,7 +2106,7 @@ button:hover {
   width: 2rem;
 }
 .load__info img.zoom-finger {
-  transform: translateY(100%);
+  transform: translateY(75%);
 }
 .load__info img.swipe-finger-1 {
   position: absolute;
@@ -2121,8 +2121,10 @@ button:hover {
 
   bottom: 2rem;
 
-  padding: 0.25rem 1.25rem;
+  padding: 0.25rem 1.25rem 0.35rem;
   background: #000;
+
+  line-height: 1;
   color: #fff;
   outline: none;
   border: none;
