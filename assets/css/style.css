@@ -2060,29 +2060,26 @@ button:hover {
 
   text-align: center;
 
-  margin: 0 auto 3rem;
-}
-
-.swipe {
-  margin: 0 auto 2rem;
+  margin: 0 auto 5rem;
 }
 
 .zoom p,
 .swipe p {
   opacity: 0;
-  width: 21ch;
+  width: 23ch;
 
-  text-align: center;
-  font-size: 0.85rem;
+  text-align: left;
+  font-size: 0.8rem;
   line-height: 1.35;
   word-break: keep-all;
 
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   color: #000;
 }
 
 .load__info p > span {
   display: block;
+  margin-bottom: .25rem;
 }
 
 /* .swipe > span {
@@ -2107,17 +2104,16 @@ button:hover {
   transform: translateY(75%);
 }
 .load__info img.swipe-finger-1 {
-  position: absolute;
-  transform: translateX(-200%);
+  transform: translateX(-225%);
 }
 .load__info img.swipe-finger-2 {
-  transform: translateX(200%);
+  transform: translateX(225%);
 }
 
 .load__info button {
   margin-top: 3rem;
 
-  padding: 0.25rem 1.25rem 0.35rem;
+  padding: 0.375rem 1.5rem 0.45rem;
   background: #000;
 
   line-height: 1;
