@@ -44,13 +44,7 @@ tl.to(".project__loading", {
   delay: 1.5,
   duration: 0.375,
   display: "none",
-}); /* ,  */
+});
 
 /* HOME PAGE CONTENT ANIMATION */
 // tl.fromTo("main", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-
-$(".load__info")
-  .find("button")
-  .click(function () {
-    $(".project__loading").css("display", "none");
-  });

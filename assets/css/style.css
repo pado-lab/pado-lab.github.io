@@ -2035,12 +2035,16 @@ button:hover {
   width: 100vw;
   height: 100vh;
 
+  background: #fff;
+  z-index: 100001;
+
+  display: none;
+}
+
+.project__loading.on {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background: #fff;
-  z-index: 100001;
 }
 
 .load__info {
@@ -2079,7 +2083,7 @@ button:hover {
 
 .load__info p > span {
   display: block;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 /* .swipe > span {
