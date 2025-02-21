@@ -2108,6 +2108,7 @@ button:hover {
   transform: translateY(75%);
 }
 .load__info img.swipe-finger-1 {
+position: absolute;
   transform: translateX(-225%);
 }
 .load__info img.swipe-finger-2 {
