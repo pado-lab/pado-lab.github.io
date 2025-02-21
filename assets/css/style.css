@@ -284,8 +284,6 @@ dialog {
 
   border-top: thin solid #eaeaea7e;
   background-color: #fb6f2233;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 
   width: 100%;
 
