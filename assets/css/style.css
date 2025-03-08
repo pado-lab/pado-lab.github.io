@@ -850,7 +850,7 @@ button:hover {
   .menu__item.projectlist
   .projectlist__item
   .item--projectname {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
 }
 
 #menu .menu__wrapper .menu__item.projectlist .projectlist__item:hover {
