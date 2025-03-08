@@ -46,11 +46,11 @@ var toggleMainPopup = function () {
   });
 
   // 일반 닫기 버튼
-  // $(".load__info")
-  //   .find("button")
-  //   .click(function () {
-  //     $(".project__loading").css("display", "none");
-  //   });
+  $(".load__info")
+    .find("button")
+    .click(function () {
+      $(".project__loading").css("display", "none");
+    });
 };
 
 $(function () {

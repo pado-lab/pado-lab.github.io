@@ -3,7 +3,7 @@ const tl = gsap.timeline({defaults: {ease: "power2.out"}});
 tl.to(".zoom-finger", {
   opacity: "1",
   scale: 1.05,
-  y: "0",
+  y: "-50%",
 
   delay: 0.25,
   duration: 0.4,
@@ -18,7 +18,7 @@ tl.to(".zoom-text", {
 tl.to(".swipe-finger-1", {
   opacity: "1",
   scale: 1.2,
-  delay: 0.5,
+  delay: 1,
   duration: 0.25,
 });
 tl.to(".swipe-finger-2", {
@@ -41,7 +41,7 @@ tl.to(".swipe-text", {
 
 tl.to(".project__loading", {
   opacity: "0",
-  delay: 1.5,
+  delay: 1,
   duration: 0.375,
   display: "none",
 });

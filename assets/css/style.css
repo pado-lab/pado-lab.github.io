@@ -2067,18 +2067,29 @@ button:hover {
   margin: 0 auto 5rem;
 }
 
+.swipe {
+  position: absolute;
+}
+
 .zoom p,
 .swipe p {
   opacity: 0;
-  width: 23ch;
+  width: 33ch;
 
-  text-align: left;
-  font-size: 0.8rem;
+  text-align: center;
+
+  font-size: 0.875rem;
   line-height: 1.35;
   word-break: keep-all;
+  text-wrap: pretty;
 
-  margin-top: 1.5rem;
+  padding: 2rem 1rem 0;
   color: #000;
+}
+
+.swipe p.swipe-text {
+  width: 36ch;
+  background: #fff;
 }
 
 .load__info p > span {
@@ -2102,7 +2113,7 @@ button:hover {
 
 .load__info img {
   opacity: 0;
-  width: 2rem;
+  width: 3rem;
 }
 .load__info img.zoom-finger {
   transform: translateY(75%);
@@ -2619,7 +2630,7 @@ button:hover {
   font-size: 0.66rem;
   text-align: center;
   text-indent: initial;
-  mix-blend-mode:hard-light;
+  mix-blend-mode: hard-light;
 
   padding: 0.125rem 0.375rem;
   background: #f0f0f070;
