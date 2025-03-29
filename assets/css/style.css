@@ -148,7 +148,9 @@ body {
 body {
   background: white;
   color: var(--black);
-  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  font-family: "Pretendard", BlinkMacSystemFont, -apple-system, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   letter-spacing: -0.2px;
   line-height: 1.4;
@@ -280,7 +282,7 @@ dialog {
   bottom: 0;
 
   margin: 0;
-  padding: 1rem 0;
+  padding: 1.25rem 0 1rem;
 
   border-top: thin solid #eaeaea7e;
   background-color: #fb6f2233;
@@ -302,7 +304,7 @@ dialog {
     width: 100%;
     height: 100%;
 
-    background-color: #fb6f2233;
+    background-color: #50b5c873;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
   }
@@ -322,8 +324,7 @@ dialog button {
   top: 0.5rem;
   right: 0.5rem;
 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 50%;
+  font-size: 75%;
 
   box-shadow: none;
   border: none;
@@ -337,6 +338,10 @@ dialog button {
 }
 
 @media (min-width: 700px) {
+  dialog {
+    padding: 1.5rem 0;
+  }
+
   dialog button {
     font-size: 100%;
   }
@@ -348,7 +353,7 @@ body.dark dialog button {
 }
 
 body.dark dialog {
-  background-color: #e95504ba;
+  background-color: #578b95bd;
 }
 
 body.hasHover .tooltip {
@@ -808,8 +813,8 @@ button:hover {
 }
 #menu .menu__wrapper .menu__item.projectlist {
   padding-bottom: 0.25rem;
-  font-size: 1rem;
-  line-height: 1.25;
+  font-size: 0.875rem;
+  line-height: 1.4;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -853,6 +858,10 @@ button:hover {
   letter-spacing: 0.25px;
 }
 
+.item--projectname:first-of-type {
+  font-size: 75%;
+}
+
 #menu .menu__wrapper .menu__item.projectlist .projectlist__item:hover {
   cursor: pointer;
 }
@@ -891,6 +900,7 @@ button:hover {
 }
 
 #menu .menu__wrapper .menu__item sup {
+  display: none;
   font-size: 60%;
   background: #ffffff90;
   color: #333;
@@ -1267,7 +1277,8 @@ button:hover {
 } */
 
 #mapping .mapping__item.hidden {
-  opacity: 0.3;
+  opacity: 0.2;
+
   pointer-events: none;
 }
 #mapping
@@ -2620,6 +2631,8 @@ button:hover {
 }
 
 .readmore__wrapper .readmore__button {
+  display: none;
+
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
@@ -3392,6 +3405,12 @@ body.dark #project .project__overview .project__layer__header {
   word-break: keep-all;
   text-wrap: pretty;
 }
+
+#information .information__item.information__cv sup {
+  font-size: inherit;
+  vertical-align: initial;
+}
+
 #information
   .information__item.information__cv
   .cv__item
