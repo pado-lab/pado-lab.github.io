@@ -282,7 +282,7 @@ dialog {
   bottom: 0;
 
   margin: 0;
-  padding: 1.25rem 0 1rem;
+  padding: .875rem 0 0.75rem;
 
   border-top: thin solid #eaeaea7e;
   background-color: #fb6f2233;
@@ -304,19 +304,33 @@ dialog {
     width: 100%;
     height: 100%;
 
-    background-color: #50b5c873;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background-color: #FD6F2873;
+    /* background-color: #50b5c873; */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
 }
 
-dialog a > span {
-  font-size: 90%;
+dialog.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none; /* 숨길 때 클릭 방지 */
 }
 
-dialog a:hover {
+dialog.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+dialog a > span {
+  font-size: 80%;
+}
+
+body.hasHover dialog a:hover {
   text-decoration: underline;
-  font-style: none;
+  font-style: normal !important;
 }
 
 dialog button {
